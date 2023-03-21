@@ -1,0 +1,14 @@
+services:
+  flask:
+    build: ./Flask_API
+    container_name: flask
+    restart: always
+    expose:
+      - 900
+
+  nginx:
+    build: ./Nginx
+    container_name: nginx
+    restart: always
+    ports:
+      - '80:1234'
